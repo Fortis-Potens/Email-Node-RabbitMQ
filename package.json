@@ -5,7 +5,7 @@
   "main": "ecosystem.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production pm2 start ecosystem.config.js"
+    "start": "NODE_ENV=production pm2-runtime start ecosystem.config.js"
   },
   "keywords": [],
   "author": "",
