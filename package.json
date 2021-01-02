@@ -1,5 +1,6 @@
 {
   "name": "MQRabbitMQ",
+  "proxy": "http://127.0.0.1:3002",
   "version": "1.0.0",
   "description": "",
   "main": "ecosystem.config.js",

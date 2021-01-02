@@ -1,7 +1,7 @@
 module.exports = {
 	apps: [
 		{
-			name: 'API',
+			name: 'EmailRabbitMQ',
 			script: './src/index.js',
 			exec_mode: 'cluster_mode',
 			instances: 'max',
