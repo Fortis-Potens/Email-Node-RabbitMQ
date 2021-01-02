@@ -7,6 +7,7 @@ const app = express();
 
 const sendEmailRoute = require('./routes/sendEmail');
 
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/email', sendEmailRoute);
