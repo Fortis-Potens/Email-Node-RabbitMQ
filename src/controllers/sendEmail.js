@@ -31,7 +31,7 @@ const sendEmail = (request, response) => {
 			.status(202)
 			.json({ success: true, message: 'Email sent successfully' });
 	} catch (error) {
-		console.log(error.message);
+		response.status(500).json({ success: false, error: error.message });
 	}
 };
 
