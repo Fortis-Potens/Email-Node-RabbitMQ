@@ -26,7 +26,7 @@ const consumeMessage = () => {
 		.then((connection) => connection.createChannel())
 		.then((ch) =>
 			ch.assertQueue(queue).then(() => {
-				console.log(
+				console.debug(
 					' [*] Waiting for messages in %s. To exit press CTRL+C',
 					queue
 				);
@@ -35,7 +35,7 @@ const consumeMessage = () => {
 						const { mail, subject, template } = JSON.parse(
 							msg.content.toString()
 						);
-						console.log(' [x] Received %s', mail);
+						console.debug(' [x] Received %s', mail);
 						// send email via aws ses
 						EmailService.sendMail(mail, subject, template).then(() => {
 							ch.ack(msg);
